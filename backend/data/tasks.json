@@ -1,0 +1,202 @@
+[
+    {
+        "id": "55851a74-fe11-401e-8223-7a2fc5daaeb1",
+        "nama_tugas": "Quiz Keamanan Siber",
+        "mata_kuliah": "Keamanan Siber",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "e3c9d042-5f01-4b7d-b0b7-2e5a675ef38f",
+        "nama_tugas": "Analisis Kasus Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-14",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "nama_tugas": "Proyek Mini Manajemen Proyek TI",
+        "mata_kuliah": "Manajemen Proyek TI",
+        "deadline": "2026-06-02",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Individu",
+        "status": "Selesai",
+        "id": "d639cda7-06c5-4961-a131-e553ed0b4fe5"
+    },
+    {
+        "id": "b25db99b-5e47-4eec-95cb-88b10e3f682f",
+        "nama_tugas": "Review Jurnal Desain Antarmuka",
+        "mata_kuliah": "Desain Antarmuka",
+        "deadline": "2026-06-09",
+        "bobot_nilai": 10,
+        "tingkat_kesulitan": 1,
+        "tipe_tugas": "Individu",
+        "status": "Aktif"
+    },
+    {
+        "id": "455a1431-c341-4d45-837f-94a84e258789",
+        "nama_tugas": "Tugas Besar Akhir Kecerdasan Buatan",
+        "mata_kuliah": "Kecerdasan Buatan",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "581a5d40-c97b-4a4a-950f-f916a75c03c5",
+        "nama_tugas": "Tugas Individu Mingguan Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-12",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Individu",
+        "status": "Aktif"
+    },
+    {
+        "nama_tugas": "Proyek Mini Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Individu",
+        "status": "Selesai",
+        "id": "b401c95e-7838-46bb-8141-427ad8ae18d1"
+    },
+    {
+        "id": "e8374e43-8903-46cb-99f4-affc97e4db1c",
+        "nama_tugas": "Tugas Besar Akhir Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 30,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "4df830d1-b721-4853-b750-2069efb4726e",
+        "nama_tugas": "Analisis Kasus Sistem Basis Data",
+        "mata_kuliah": "Sistem Basis Data",
+        "deadline": "2026-06-03",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "a5d2c193-b969-4833-8c39-331e5f25bd41",
+        "nama_tugas": "Tugas Besar Akhir Rekayasa Perangkat Lunak",
+        "mata_kuliah": "Rekayasa Perangkat Lunak",
+        "deadline": "2026-06-14",
+        "bobot_nilai": 10,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "009510c7-ebdd-4038-8c41-c6cc003ed69f",
+        "nama_tugas": "Proyek Mini Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-08",
+        "bobot_nilai": 25,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "a9c8ca3e-07f7-4f49-a9ae-41a37159c561",
+        "nama_tugas": "Quiz Keamanan Siber",
+        "mata_kuliah": "Keamanan Siber",
+        "deadline": "2026-05-31",
+        "bobot_nilai": 30,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "65d1a4d1-cc1e-4966-80c5-5df749c039a2",
+        "nama_tugas": "Presentasi Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 25,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "9d1f1f85-5203-47d3-bd0b-ad97596c1764",
+        "nama_tugas": "Analisis Kasus Jaringan Komputer",
+        "mata_kuliah": "Jaringan Komputer",
+        "deadline": "2026-06-13",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "1b0cdb0e-2fc9-4227-a199-17dbebfbd33a",
+        "nama_tugas": "Makalah Kelompok Jaringan Komputer",
+        "mata_kuliah": "Jaringan Komputer",
+        "deadline": "2026-06-13",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Individu",
+        "status": "Aktif"
+    },
+    {
+        "id": "190f5a68-ef6c-40e8-adc0-c7910b1ae08c",
+        "nama_tugas": "Analisis Kasus Manajemen Proyek TI",
+        "mata_kuliah": "Manajemen Proyek TI",
+        "deadline": "2026-06-02",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "47d2c816-c7da-4af9-8217-6a0fa9e0ed19",
+        "nama_tugas": "Makalah Kelompok Statistika",
+        "mata_kuliah": "Statistika",
+        "deadline": "2026-06-12",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    },
+    {
+        "id": "d228adbf-ed50-443f-9afd-4926a873a024",
+        "nama_tugas": "Latihan Soal Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-08",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 1,
+        "tipe_tugas": "Individu",
+        "status": "Aktif"
+    },
+    {
+        "id": "ec815f9b-04a8-40b4-9700-873a59904726",
+        "nama_tugas": "Proyek Mini Rekayasa Perangkat Lunak",
+        "mata_kuliah": "Rekayasa Perangkat Lunak",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Individu",
+        "status": "Aktif"
+    },
+    {
+        "id": "5835b57c-d64c-4048-a74a-cbd787bf4a9d",
+        "nama_tugas": "Quiz Kecerdasan Buatan",
+        "mata_kuliah": "Kecerdasan Buatan",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif"
+    }
+]

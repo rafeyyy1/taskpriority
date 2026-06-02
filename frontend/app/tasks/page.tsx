@@ -1,13 +1,24 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { getTasks, uploadExcel } from "@/lib/api";
-import { Upload, Plus, Search } from "lucide-react";
+import { getTasks, uploadExcel, createTask, updateTask, deleteTask } from "@/lib/api";
+import { Upload, Plus, Search, X } from "lucide-react";
 
 export default function TasksPage() {
   const [tasks, setTasks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editId, setEditId] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    nama_tugas: "",
+    mata_kuliah: "",
+    deadline: "",
+    bobot_nilai: 10,
+    tingkat_kesulitan: 3,
+    tipe_tugas: "Individu"
+  });
 
   useEffect(() => {
     fetchTasks();
@@ -37,6 +48,56 @@ export default function TasksPage() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      if (editId) {
+        await updateTask(editId, formData);
+      } else {
+        await createTask(formData);
+      }
+      setIsModalOpen(false);
+      setEditId(null);
+      setFormData({
+        nama_tugas: "",
+        mata_kuliah: "",
+        deadline: "",
+        bobot_nilai: 10,
+        tingkat_kesulitan: 3,
+        tipe_tugas: "Individu"
+      });
+      fetchTasks();
+    } catch (error) {
+      console.error(error);
+      alert("Gagal menyimpan tugas.");
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    if (confirm("Apakah Anda yakin ingin menghapus tugas ini?")) {
+      try {
+        await deleteTask(id);
+        fetchTasks();
+      } catch (error) {
+        console.error(error);
+        alert("Gagal menghapus tugas.");
+      }
+    }
+  };
+
+  const handleEditClick = (task: any) => {
+    setEditId(task.id);
+    setFormData({
+      nama_tugas: task.nama_tugas,
+      mata_kuliah: task.mata_kuliah,
+      deadline: task.deadline,
+      bobot_nilai: task.bobot_nilai,
+      tingkat_kesulitan: task.tingkat_kesulitan,
+      tipe_tugas: task.tipe_tugas
+    });
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="p-8 space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
@@ -61,7 +122,21 @@ export default function TasksPage() {
             Import Excel
           </button>
           
-          <button className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all">
+          <button 
+            onClick={() => {
+              setEditId(null);
+              setFormData({
+                nama_tugas: "",
+                mata_kuliah: "",
+                deadline: "",
+                bobot_nilai: 10,
+                tingkat_kesulitan: 3,
+                tipe_tugas: "Individu"
+              });
+              setIsModalOpen(true);
+            }}
+            className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
+          >
             <Plus className="mr-2 h-4 w-4" />
             Tambah Tugas
           </button>
@@ -100,7 +175,7 @@ export default function TasksPage() {
                 </tr>
               ) : tasks.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="px-6 py-8 text-center text-slate-400">Belum ada data tugas. Silakan import dari Excel.</td>
+                  <td colSpan={7} className="px-6 py-8 text-center text-slate-400">Belum ada data tugas. Silakan import dari Excel atau tambah manual.</td>
                 </tr>
               ) : (
                 tasks.map((task) => (
@@ -128,8 +203,8 @@ export default function TasksPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button className="text-indigo-600 hover:text-indigo-900 mr-3">Edit</button>
-                      <button className="text-rose-600 hover:text-rose-900">Hapus</button>
+                      <button onClick={() => handleEditClick(task)} className="text-indigo-600 hover:text-indigo-900 mr-3">Edit</button>
+                      <button onClick={() => handleDelete(task.id)} className="text-rose-600 hover:text-rose-900">Hapus</button>
                     </td>
                   </tr>
                 ))
@@ -138,6 +213,109 @@ export default function TasksPage() {
           </table>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+            <div className="flex items-center justify-between mb-5">
+              <h3 className="text-lg font-semibold text-slate-900">{editId ? "Edit Tugas" : "Tambah Tugas Baru"}</h3>
+              <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-slate-500">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Nama Tugas</label>
+                <input 
+                  type="text" 
+                  required
+                  value={formData.nama_tugas}
+                  onChange={(e) => setFormData({...formData, nama_tugas: e.target.value})}
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  placeholder="Misal: Makalah AHP"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Mata Kuliah</label>
+                <input 
+                  type="text" 
+                  required
+                  value={formData.mata_kuliah}
+                  onChange={(e) => setFormData({...formData, mata_kuliah: e.target.value})}
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  placeholder="Misal: SPK"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Deadline</label>
+                <input 
+                  type="date" 
+                  required
+                  value={formData.deadline}
+                  onChange={(e) => setFormData({...formData, deadline: e.target.value})}
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Bobot Nilai (0-100)</label>
+                  <input 
+                    type="number" 
+                    min="0" max="100" required
+                    value={formData.bobot_nilai}
+                    onChange={(e) => setFormData({...formData, bobot_nilai: parseInt(e.target.value)})}
+                    className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Tingkat Kesulitan (1-5)</label>
+                  <select
+                    value={formData.tingkat_kesulitan}
+                    onChange={(e) => setFormData({...formData, tingkat_kesulitan: parseInt(e.target.value)})}
+                    className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  >
+                    {[1,2,3,4,5].map(n => (
+                      <option key={n} value={n}>{n}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Tipe Tugas</label>
+                <select
+                  value={formData.tipe_tugas}
+                  onChange={(e) => setFormData({...formData, tipe_tugas: e.target.value})}
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                >
+                  <option value="Individu">Individu</option>
+                  <option value="Kelompok">Kelompok</option>
+                </select>
+              </div>
+
+              <div className="pt-4 flex justify-end space-x-3">
+                <button 
+                  type="button" 
+                  onClick={() => setIsModalOpen(false)}
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus:outline-none"
+                >
+                  Batal
+                </button>
+                <button 
+                  type="submit" 
+                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  {editId ? "Update Tugas" : "Simpan Tugas"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

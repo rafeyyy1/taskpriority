@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getDashboardStats } from "@/lib/api";
 import { LayoutDashboard, CheckCircle, Clock } from "lucide-react";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 export default function Dashboard() {
   const [stats, setStats] = useState({
@@ -22,6 +23,13 @@ export default function Dashboard() {
     };
     fetchStats();
   }, []);
+
+  const chartData = [
+    { name: 'Aktif', value: stats.total_active },
+    { name: 'Selesai', value: stats.total_completed },
+  ];
+  
+  const COLORS = ['#4f46e5', '#10b981'];
 
   return (
     <div className="p-8 space-y-8">
@@ -64,9 +72,35 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Placeholder for chart */}
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 h-96 flex flex-col justify-center items-center">
-        <p className="text-slate-400 font-medium">Distribusi Tugas (Visualisasi Recharts akan ditampilkan di sini)</p>
+      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 h-96 flex flex-col">
+        <h3 className="text-lg font-semibold text-slate-900 mb-4">Distribusi Tugas</h3>
+        <div className="flex-1 w-full h-full">
+          {(stats.total_active > 0 || stats.total_completed > 0) ? (
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={100}
+                  paddingAngle={5}
+                  dataKey="value"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <p className="text-slate-400 font-medium">Belum ada data tugas.</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ export default function PriorityPage() {
   };
 
   return (
-    <div className="p-8 space-y-6 max-w-5xl">
+    <div className="p-8 space-y-6 w-full">
       <div className="flex items-center space-x-4">
         <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
           <Trophy className="h-8 w-8" />

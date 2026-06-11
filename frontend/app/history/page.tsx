@@ -24,7 +24,7 @@ export default function HistoryPage() {
   };
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-4 sm:p-8 space-y-6">
       <div className="flex items-center space-x-4">
         <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
           <History className="h-8 w-8" />

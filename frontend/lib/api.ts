@@ -6,6 +6,44 @@ export const api = axios.create({
   baseURL: API_URL,
 });
 
+// Automatically inject Authorization header if token exists in localStorage
+api.interceptors.request.use(
+  (config) => {
+    if (typeof window !== 'undefined') {
+      const token = localStorage.getItem('token');
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Auth endpoints
+export const login = async (credentials: any) => {
+  const response = await api.post('/login', credentials);
+  return response.data; // returns { token, user }
+};
+
+export const registerUser = async (userData: any) => {
+  const response = await api.post('/register', userData);
+  return response.data; // returns user
+};
+
+export const logout = async () => {
+  const response = await api.post('/logout');
+  return response.data;
+};
+
+export const getCurrentUser = async () => {
+  const response = await api.get('/users/me');
+  return response.data;
+};
+
+// Task endpoints
 export const getTasks = async () => {
   const response = await api.get('/tasks');
   return response.data;
@@ -51,3 +89,4 @@ export const getDashboardStats = async () => {
   const response = await api.get('/dashboard-stats');
   return response.data;
 };
+

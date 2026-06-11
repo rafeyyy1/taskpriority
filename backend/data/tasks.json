@@ -1,1 +1,255 @@
-[]
+[
+    {
+        "nama_tugas": "Makalah",
+        "mata_kuliah": "SPK",
+        "deadline": "2026-06-06",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "id": "5fe8daea-4985-4a20-bfc9-2f061b4049c3",
+        "user_id": "admin"
+    },
+    {
+        "id": "a0f0884e-e5c6-4228-86a5-8777bf7cff53",
+        "nama_tugas": "Quiz Keamanan Siber",
+        "mata_kuliah": "Keamanan Siber",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "f5353429-2f64-426f-848e-e8e0da3d5d8c",
+        "nama_tugas": "Analisis Kasus Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-14",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Proyek Mini Manajemen Proyek TI",
+        "mata_kuliah": "Manajemen Proyek TI",
+        "deadline": "2026-06-02",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Individu",
+        "status": "Selesai",
+        "id": "1ec7ed00-0972-4368-888e-316efe3ab548",
+        "user_id": "admin"
+    },
+    {
+        "id": "71319808-d99c-44d4-b5fb-4b0b5f47057e",
+        "nama_tugas": "Review Jurnal Desain Antarmuka",
+        "mata_kuliah": "Desain Antarmuka",
+        "deadline": "2026-06-09",
+        "bobot_nilai": 10,
+        "tingkat_kesulitan": 1,
+        "tipe_tugas": "Individu",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Tugas Besar Akhir Kecerdasan Buatan",
+        "mata_kuliah": "Kecerdasan Buatan",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Kelompok",
+        "status": "Selesai",
+        "id": "caa77031-8dbb-4583-8a09-9a488ac77aa7",
+        "user_id": "admin"
+    },
+    {
+        "id": "d8e1f930-b99d-46c2-8cd8-5f45843accbc",
+        "nama_tugas": "Tugas Individu Mingguan Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-12",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Individu",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Proyek Mini Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Individu",
+        "status": "Selesai",
+        "id": "6ed985ff-c228-45f4-9eef-83dd76e03dc0",
+        "user_id": "admin"
+    },
+    {
+        "id": "375fa1f3-027d-483d-8a4b-33b9daa27715",
+        "nama_tugas": "Tugas Besar Akhir Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 30,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Analisis Kasus Sistem Basis Data",
+        "mata_kuliah": "Sistem Basis Data",
+        "deadline": "2026-06-03",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Selesai",
+        "id": "7a161346-68fc-474e-8523-ba2be51f2bd9",
+        "user_id": "admin"
+    },
+    {
+        "id": "c88f617a-386b-4f2c-af55-0cca6957d7ad",
+        "nama_tugas": "Tugas Besar Akhir Rekayasa Perangkat Lunak",
+        "mata_kuliah": "Rekayasa Perangkat Lunak",
+        "deadline": "2026-06-14",
+        "bobot_nilai": 10,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "4874cce2-8a52-43e1-8622-d1d058ac6b2e",
+        "nama_tugas": "Proyek Mini Sistem Operasi",
+        "mata_kuliah": "Sistem Operasi",
+        "deadline": "2026-06-08",
+        "bobot_nilai": 25,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Quiz Keamanan Siber",
+        "mata_kuliah": "Keamanan Siber",
+        "deadline": "2026-05-31",
+        "bobot_nilai": 30,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Selesai",
+        "id": "6daafdc4-9ef6-4bed-ac57-162ae9fffb24",
+        "user_id": "admin"
+    },
+    {
+        "id": "a0ed2ed7-644e-4cec-af8b-0a45f1b6a8ba",
+        "nama_tugas": "Presentasi Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 25,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "481566e6-bc60-4383-84d5-bb6d7e0e689e",
+        "nama_tugas": "Analisis Kasus Jaringan Komputer",
+        "mata_kuliah": "Jaringan Komputer",
+        "deadline": "2026-06-13",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "0c2ef465-297e-4d4d-a6c8-9756456a9773",
+        "nama_tugas": "Makalah Kelompok Jaringan Komputer",
+        "mata_kuliah": "Jaringan Komputer",
+        "deadline": "2026-06-13",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Individu",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "a65e7f31-2d33-4bc9-83bb-2d243748a723",
+        "nama_tugas": "Analisis Kasus Manajemen Proyek TI",
+        "mata_kuliah": "Manajemen Proyek TI",
+        "deadline": "2026-06-02",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "bc4214b4-e0ac-4609-9f70-5713e4295eee",
+        "nama_tugas": "Makalah Kelompok Statistika",
+        "mata_kuliah": "Statistika",
+        "deadline": "2026-06-12",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "a12a4eac-0c03-48d8-bf99-96993bfd292e",
+        "nama_tugas": "Latihan Soal Pemrograman Web",
+        "mata_kuliah": "Pemrograman Web",
+        "deadline": "2026-06-08",
+        "bobot_nilai": 5,
+        "tingkat_kesulitan": 1,
+        "tipe_tugas": "Individu",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "2fe16647-db3c-4ed3-bf9e-03bb25b931d3",
+        "nama_tugas": "Proyek Mini Rekayasa Perangkat Lunak",
+        "mata_kuliah": "Rekayasa Perangkat Lunak",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 20,
+        "tingkat_kesulitan": 4,
+        "tipe_tugas": "Individu",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "id": "10d2e674-7e25-4a6a-b553-221380d98b84",
+        "nama_tugas": "Quiz Kecerdasan Buatan",
+        "mata_kuliah": "Kecerdasan Buatan",
+        "deadline": "2026-06-16",
+        "bobot_nilai": 15,
+        "tingkat_kesulitan": 2,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Makalah",
+        "mata_kuliah": "spk",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Kelompok",
+        "status": "Selesai",
+        "id": "39bd2e93-9ee4-4fff-9a52-89bc5dbefa42",
+        "user_id": "admin"
+    },
+    {
+        "nama_tugas": "Tugas AHP",
+        "mata_kuliah": "SPK",
+        "deadline": "2026-06-04",
+        "bobot_nilai": 40,
+        "tingkat_kesulitan": 3,
+        "tipe_tugas": "Individu",
+        "status": "Selesai",
+        "id": "bb6956f1-c03d-4e8d-b941-312975c31874",
+        "user_id": "admin"
+    }
+]

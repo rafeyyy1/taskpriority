@@ -43,7 +43,7 @@ export default function PriorityPage() {
   };
 
   return (
-    <div className="p-8 space-y-6 max-w-5xl">
+    <div className="p-4 sm:p-8 space-y-6 max-w-5xl">
       <div className="flex items-center space-x-4">
         <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
           <Trophy className="h-8 w-8" />
@@ -63,8 +63,8 @@ export default function PriorityPage() {
       ) : (
         <div className="space-y-4 mt-8">
           {priorities.map((item) => (
-            <div 
-              key={item.task.id} 
+            <div
+              key={item.task.id}
               className={`bg-white p-6 rounded-2xl shadow-sm border-2 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center ${item.priority_status === 'Critical' ? 'border-rose-200' : 'border-slate-100'}`}
             >
               <div className="flex items-start space-x-6">
@@ -74,7 +74,7 @@ export default function PriorityPage() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">{item.task.nama_tugas}</h3>
                   <div className="text-sm font-medium text-indigo-600 mb-2">{item.task.mata_kuliah}</div>
-                  
+
                   <div className="flex flex-wrap gap-2 text-xs">
                     <span className="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-lg">
                       Deadline: <strong className="text-slate-900">{item.task.deadline}</strong>
@@ -91,13 +91,13 @@ export default function PriorityPage() {
 
               <div className="mt-4 sm:mt-0 flex flex-col sm:items-end w-full sm:w-auto">
                 <div className="text-sm text-slate-500 mb-1">Priority Score: <strong className="text-slate-900 text-lg">{item.priority_score}</strong></div>
-                
+
                 <div className="flex items-center justify-between sm:justify-end w-full space-x-4 mt-2">
                   <span className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider border ${getStatusColor(item.priority_status)}`}>
                     {item.priority_status}
                   </span>
-                  
-                  <button 
+
+                  <button
                     onClick={() => markAsDone(item.task)}
                     className="inline-flex items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 px-4 py-2 text-sm font-semibold hover:bg-indigo-600 hover:text-white transition-all focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >

@@ -32,7 +32,7 @@ export default function PriorityPage() {
     }
   };
 
-  const getStatusColor = (status: str) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case "Critical": return "bg-rose-100 text-rose-800 border-rose-200";
       case "High": return "bg-orange-100 text-orange-800 border-orange-200";
@@ -43,7 +43,7 @@ export default function PriorityPage() {
   };
 
   return (
-    <div className="p-4 sm:p-8 space-y-6 max-w-5xl">
+    <div className="p-4 sm:p-8 space-y-6 w-full">
       <div className="flex items-center space-x-4">
         <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
           <Trophy className="h-8 w-8" />

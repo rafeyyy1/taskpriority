@@ -38,16 +38,16 @@ const routes = [
     color: "text-amber-500",
   },
   {
-    label: "Pengaturan AHP",
-    icon: Settings,
-    href: "/ahp-settings",
-    color: "text-gray-500",
-  },
-  {
     label: "Riwayat",
     icon: History,
     href: "/history",
     color: "text-emerald-500",
+  },
+  {
+    label: "Pengaturan AHP",
+    icon: Settings,
+    href: "/ahp-settings",
+    color: "text-gray-500",
   },
 ];
 

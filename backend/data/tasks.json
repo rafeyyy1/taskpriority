@@ -251,5 +251,16 @@
         "status": "Selesai",
         "id": "bb6956f1-c03d-4e8d-b941-312975c31874",
         "user_id": "admin"
+    },
+    {
+        "nama_tugas": "presentasi spk",
+        "mata_kuliah": "spk",
+        "deadline": "2026-06-03",
+        "bobot_nilai": 10,
+        "tingkat_kesulitan": 5,
+        "tipe_tugas": "Kelompok",
+        "status": "Aktif",
+        "id": "3667a61f-1dab-4553-aaac-6d753aca74cc",
+        "user_id": "admin"
     }
 ]
